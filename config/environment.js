@@ -1,12 +1,13 @@
 /* jshint node: true */
 
-module.exports = function (environment) {
-  'use strict';
-  const ENV = {
+module.exports = function(environment) {
+  var ENV = {
+    'use strict'
     modulePrefix: 'kitchnlistr',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    apiHost: 'http://localhost:3000/',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -49,7 +50,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
+    ENV.rootURL = '/<kitchnlistr>';
     ENV.locationType = 'hash';
+    ENV.apiHost = 'https://secure-mountain-84093.herokuapp.com>';
   }
 
   return ENV;
