@@ -1,8 +1,9 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
+  'use strict';
+
   var ENV = {
-    'use strict'
     modulePrefix: 'kitchnlistr',
     environment: environment,
     rootURL: '/',
